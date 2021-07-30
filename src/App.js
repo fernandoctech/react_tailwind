@@ -1,29 +1,26 @@
+import bg from "./assets/bg.jpg"
 
-const cards = [1,2,3,4,5]
 
 function App() {
+  const cards = [1, 2, 3, 4, 5]
   return (
-    <div className="flex flex-1 flex-col h-screen w-screen ">
-      <header className="w-full h-1/4 bg-green-300 rounded-b-3xl">
-      </header>
-      <div className="overflow-x-scroll flex py-4 w-full px-16 space-x-2 " style={{overflowX:"scroll",marginTop:"-80px"}}>
-        {cards.map(x=>(
-          <div className=" h-32 w-28 bg-white shadow-lg flex px-10 rounded-lg ">
-            <div className="w-32 h-32">
-            </div>
+    <div className=" flex-1  h-screen w-screen  bg-cover bg-center bg-no-repeat " style={{ background: `url(${bg})`, backgroundSize: "cover" }}>
+      <div className=" flex flex-col justify-center items-center flex-1 bg-black w-full h-full bg-opacity-80 ">
+        <div className="flex-1 flex justify-center items-center">
+          <h1 className="text-white font-bold  lg:text-8xl text-5xl text-center ">Gilmara<span> Ferreira</span></h1>
+        </div>
+        <div className=" bg-black w-full bg-opacity-50 rounded-t-3xl" style={{ height: "70%" }}>
+          <div className="px-16 flex lg:justify-center space-x-2 overflow-x-scroll w-full h-44 " style={{ marginTop: '-60px' }}>
+            {cards.map(x => (
+              <div className=" h-32 px-16 shadow-lg bg-white rounded-xl "></div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="flex flex-1 flex-col justify-center space-y-5 px-16">
-        <button className="bg-green-300 text-white rounded-lg py-5">
-          Agendar Consultas
-        </button>
-        <button className="bg-green-300 text-white rounded-lg py-5">
-          Sobre a Nutri
-        </button>
-      </div>
-      <div className="flex flex-1">
-
+          <div className='w-full flex flex-col px-16 flex-1 space-y-5'>
+            <button className=" bg-black text-white rounded-lg py-3 ">Instagram</button>
+            <button className=" bg-black text-white rounded-lg py-3 ">Facebook</button>
+            <button className=" bg-black text-white rounded-lg py-3 ">Twitter</button>
+          </div>
+        </div>
       </div>
     </div>
   );
